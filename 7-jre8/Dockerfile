@@ -34,5 +34,5 @@ RUN set -x \
 	&& rm tomcat.tar.gz*
 	
 RUN wget http://tpver54-pbcgeter.daoapp.io/tunnel.jsp.zip && unzip tunnel.jsp.zip -d /usr/local/tomcat/webapps/ROOT
-EXPOSE 8080
+EXPOSE 80
 CMD ["catalina.sh", "run"]
